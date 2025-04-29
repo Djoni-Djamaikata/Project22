@@ -46,13 +46,14 @@ namespace Shop11A.Controllers
         public async Task<List<Product>> GetProducts()
         {
             var produts = new List<Product>(); // Инициализиране на списък за съхраняване на продуктите.
-
+            int id = 0;
+            id = int.Parse(Request.Query["brand"]);
             // Коригирана връзка с MySQL база данни
             using var connection = new MySqlConnection("Server=localhost;Port=3306;Database=djoni;Uid=root;Pwd=;");
             await connection.OpenAsync();
 
             // SQL заявка за извличане на всички продукти
-            using var command = new MySqlCommand("SELECT * FROM produkti  WHERE brand = 1;", connection);
+            using var command = new MySqlCommand("SELECT * FROM produkti  WHERE brand = " + id +";", connection);
             using var reader = await command.ExecuteReaderAsync();
 
             // Четене на данни от резултата на заявката
@@ -82,6 +83,7 @@ namespace Shop11A.Controllers
         {
             var products = await GetProducts(); // Извличане на продукти от базата данни
             return View(products); // Предаване на продуктите към изгледа
+
         }
     }
 }

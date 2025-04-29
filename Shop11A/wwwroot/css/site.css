@@ -20,7 +20,7 @@ html {
 body {
     margin-bottom: 60px;
     background: #6b6b6b;
-    background-image: url('/images/slide-2.jpg');
+    background-image: url('/images/vhjk.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* ???? ? ????? "????????"*/
@@ -32,4 +32,9 @@ body {
 
 h1 {
     color: whitesmoke;
+}
+
+.carousel-caption 
+{
+    top: 30%;
 }
