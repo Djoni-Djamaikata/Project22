@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PGMT Plovdiv Shop</title>
+    <title>MotoRex.com</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Shop11A.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><img src="http://localhost:5041/images/logo.png" alt="Logo" width="50" height="50"/></a>
+                <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><img src="http://localhost:5041/images/logo-envado.jpg" alt="Logo" width="50" height="50" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,7 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
                         </li>
                         <li class="nav-item">
                             <!-- Dropdown меню -->
@@ -29,15 +31,47 @@
                                     Марки
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="/brand/detals?brand=1">YAMAHA</a></li>
-                                    <li><a class="dropdown-item" href="/brand/detals?brand=2">HONDA</a></li>
-                                    <li><a class="dropdown-item" href="/brand/detals?brand=3">KTM</a></li>
-                                    <li><a class="dropdown-item" href="/brand/detals?brand=4">SUZUKI</a></li>
-                                    <li><a class="dropdown-item" href="/brand/detals?brand=5">GASGAS</a></li>
+                                    <li><a class="dropdown-item" href="/brand">Всички</a></li>
+                                    <li><a class="dropdown-item" href="/brand/detals?brand=1&cat=0">YAMAHA</a></li>
+                                    <li><a class="dropdown-item" href="/brand/detals?brand=2&cat=0">HONDA</a></li>
+                                    <li><a class="dropdown-item" href="/brand/detals?brand=3&cat=0">KTM</a></li>
+                                    <li><a class="dropdown-item" href="/brand/detals?brand=4&cat=0">SUZUKI</a></li>
+                                    <li><a class="dropdown-item" href="/brand/detals?brand=5&cat=0">GASGAS</a></li>
                                 </ul>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <!-- Dropdown меню -->
+                            <div class="dropdown">
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Категори
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/categories/detals?cat=1">Enduro</a></li>
+                                    <li><a class="dropdown-item" href="/categories/detals?cat=2">Krosovi</a></li>
+                                    
+
+
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <a class="nav-link ms-3 phone" href="tel:+35989345164"><i class="bi bi-telephone-fill"></i> +359 899345164</a>
+                        <a class="nav-link ms-3 phone" href="mailto:contact@MotoRex.com">
+                            <i class="bi bi-envelope-fill"></i>
+                            contact@MotoRex.com
+                            
+                        </a>
+
+                        <a class="nav-link ms-3 phone" href="https://maps.app.goo.gl/fmGzqPUpbQqoniDw6"  target="_blank"><i class="bi bi-geo-alt"></i> Адрес</a>
+
+
+                        <a href="/Product/Search">🔍 Търсачка</a>
+
+                        
+
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -48,9 +82,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2025 - PGMT Plovdiv - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - MotoRex.com- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

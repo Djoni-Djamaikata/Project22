@@ -1,14 +1,7 @@
 ﻿@model IEnumerable<Shop11A.Models.Brand>
 
 
-
-
-<div class="container-fluid d-flex align-items-center justify-content-center">
-	<img src="http://localhost:5041/images/vhjk.jpg" alt="banner" class="" />
-</div>
-
-
-<h1 class="text-center">Motorex</h1>
+<h1 class="text-center">MotoRex</h1>
 
 <div class="row col-md-12">
 	@foreach (var brand in Model)
@@ -19,11 +12,13 @@
 
 		<div class="col-md-4">
 			<div class="card mb-4 shadow-sm">
+				<a href="/brand/detals?brand=@brand.Id&cat=0">
 				<img src="@imgUrl" alt="@brand.Name" class="img-fluid img-thumbnail" />
 				<div class="card-body">
 					<h5 class="card-title">@brand.Name</h5>
 					
 				</div>
+				</a>
 			</div>
 		</div>
 	}

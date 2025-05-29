@@ -38,3 +38,35 @@ h1 {
 {
     top: 30%;
 }
+
+.card img.img-fluid.img-thumbnail {
+    height: 350px !important;
+    object-fit: contain;
+}
+
+li.nav-item
+{
+    margin-left: 5px;
+}
+
+nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.box-shadow.mb-3 {
+    background-color: #000 !important;
+}
+
+h1,
+.carousel-caption.d-none.d-md-block {
+    color: #fff;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #ff0000;
+}
+footer{
+    background: #000;
+}
+.navbar-light .navbar-nav .nav-link,
+.cat-btn a{
+    color: #fff;
+}
+
+a.nav-link.ms-3.phone:hover,
+a.nav-link.ms-3.phone:focus {
+    color: #d7c9c9;
+}
